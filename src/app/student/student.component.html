@@ -1,0 +1,19 @@
+<h2>Student</h2>
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (student of students; track student.name) {
+      <tr>
+        <td>{{student.name}}</td>
+        <td>{{student.age}}</td>
+      </tr>
+      }
+    <tbody>
+  </table>
+</div>

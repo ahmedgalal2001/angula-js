@@ -1,0 +1,18 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<main class="home container-fluid d-flex">
+  @for (user of Users; track user.id) {
+    <div class="card m-1 p-3" style="width: 300px !important;height: 200px;opacity: 0.6;">
+      <p>Id : <strong>{{user.id}}</strong></p>
+      <p>Name : <strong>{{user.name}}</strong></p>
+      <a routerLink="/student/details/{{user.id}}">Email : <strong>{{user.email}}</strong></a>
+      <p>Age: <strong>{{user.age}}</strong></p>
+      <p>Phone: <strong>{{user.phone}}</strong></p>
+    </div>
+  }
+  <div class="btn-float">
+    <button (click)="add()" class="btn btn-primary fs-4">+</button>
+  </div>
+</main>

@@ -1,0 +1,12 @@
+<div class="slideshow-container">
+  <div class="mySlides fade" style="display: block;">
+    <img [src]="sliderData[index]" style="width:100%;">
+  </div>
+  <a class="prev" (click)="prev()">&#10094;</a>
+  <a class="next" (click)="next()">&#10095;</a>
+</div>
+<br>
+<div style="text-align: center;">
+  <button class="w-100 btn btn-lg" (click)="slide()" type="button">Slide</button>
+  <button class="w-100 btn btn-lg" (click)="stopSlide()" type="button">Stop</button>
+</div>
